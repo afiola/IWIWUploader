@@ -213,3 +213,8 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+#Private
+keys.txt
+keys.py
+IWIWUploader/keys.py
