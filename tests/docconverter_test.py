@@ -1,4 +1,5 @@
 import os
+import os.path
 import unittest
 import pyimgur
 from iwiwuploader.keys import clientID
@@ -8,8 +9,8 @@ from iwiwuploader import docconverter
 class TestConverter(unittest.TestCase):
     def test_docConvert(self):
         im = pyimgur.Imgur(clientID, clientSecret)
-        testPath = os.environ['USERPROFILE'] + "\\Pictures\\IWIWtest\\testdoc.txt"
-        testAlbum = im.get_album("auVkY")
+        testPath = os.path.join(os.environ['USERPROFILE'], "Pictures\\IWIWtest\\testdoc.txt")
+        testAlbum = im.get_album("Jpc1N")
         docconverter.docConvert(docPath = testPath, album = testAlbum)
         with open(testPath, 'r') as docFile:
             lines = docFile.readlines()

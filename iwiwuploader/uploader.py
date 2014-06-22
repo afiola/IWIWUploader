@@ -31,7 +31,7 @@ def uploadAlbum(folderPath, albumName = "TestAlbum", albumDesc = ""):
 	im = authorize()
 	uploadedList = []
 	newAlbum = im.create_album(title=albumName, description=albumDesc)
-	for image in glob.glob(folderPath+"*.jpg"):
+	for image in glob.glob(os.path.join(folderPath,"*.jpg")):
 		remoteImage = im.upload_image(path=image, title=image.rpartition('\\')[2])
 		uploadedList.append(remoteImage)
 	newAlbum.add_images(uploadedList)
