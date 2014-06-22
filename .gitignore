@@ -217,4 +217,5 @@ pip-log.txt
 #Private
 keys.txt
 keys.py
-scripts/keys.py
+iwiwuploader/keys.py
+__init__.py
